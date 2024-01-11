@@ -1,0 +1,32 @@
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String usuario = "";
+        String contraseña = "";
+        boolean login = false;
+        for (int i = 0; i < 3 && !login; i++) {
+            System.out.println(" Introduce el usuario");
+            usuario = sc.nextLine();
+            System.out.println(" Introduce la contraseña");
+            contraseña = sc.nextLine();
+            if (login(usuario, contraseña)) {
+                System.out.println("Datos correctos");
+                login = true;
+            } else {
+                System.out.println("Datos incorrectos, te quedan " + (-i + 2) + " intentos");
+            }
+
+        }
+        if (!login) {
+            System.out.println("te has quedadosin intentos");
+        }
+
+    }
+
+    static boolean login(String usuario, String contraseña) {
+        if (usuario.equals("Usuari1") && contraseña.equals("asdfg")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
