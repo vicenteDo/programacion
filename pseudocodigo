@@ -1,0 +1,32 @@
+Inicio
+    Definir usuario como Cadena
+    Definir contraseña como Cadena
+    Definir login como Booleano
+    login = Falso
+
+    Para i desde 0 hasta 2 con incremento 1 hacer
+        Mostrar "Introduce el usuario"
+        Leer usuario
+        Mostrar "Introduce la contraseña"
+        Leer contraseña
+
+        Si login(usuario, contraseña) es Verdadero entonces
+            Mostrar "Datos correctos"
+            login = Verdadero
+        Sino
+            Mostrar "Datos incorrectos, te quedan " + (-i + 2) + " intentos"
+        Fin Si
+    Fin Para
+
+    Si no login entonces
+        Mostrar "Te has quedado sin intentos"
+    Fin Si
+Fin
+
+Función login(usuario, contraseña)
+    Si usuario es igual a "Usuari1" y contraseña es igual a "asdfg" entonces
+        Devolver Verdadero
+    Sino
+        Devolver Falso
+    Fin Si
+Fin Función
